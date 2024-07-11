@@ -39,8 +39,8 @@ function CadastrarImc() {
       body: JSON.stringify(tarefa),
     })
       .then((resposta) => resposta.json())
-      .then((tarefa: Tarefa) => {
-        navigate("/pages/tarefa/listar");
+      .then((imc: Imc) => {
+        navigate("/pages/imc/listar");
       });
     e.preventDefault();
   }
@@ -49,18 +49,18 @@ function CadastrarImc() {
     <div>
       <h1>Cadastrar Tarefa</h1>
       <form onSubmit={cadastrarTarefa}>
-        <label>Título:</label>
+        <label>Peso:</label>
         <input
           type="text"
-          placeholder="Digite o título"
+          placeholder="Digite o peso"
           onChange={(e: any) => setTitulo(e.target.value)}
           required
         />
         <br />
-        <label>Descricao:</label>
+        <label>Altura:</label>
         <input
           type="text"
-          placeholder="Digite o descrição"
+          placeholder="Digite altura"
           onChange={(e: any) => setDescricao(e.target.value)}
         />
         <br />
