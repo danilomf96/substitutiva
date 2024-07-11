@@ -1,0 +1,21 @@
+### Listar Imcs
+GET http://localhost:5283/api/imc/listar
+
+### Cadastrar uma nova imc
+POST http://localhost:5283/api/imc/cadastrar
+Content-Type: application/json
+
+{
+    "altura": "2",
+    "peso": "100",
+    "alunoId" : "4b10069d-26cb-4b3f-be14-40c109085c2b"
+}
+
+### ALTERAR IMC
+PUT http://localhost:5283/api/imc/alterar/f101990b-4091-430a-b649-49d690d7383e
+Content-Type: application/json
+
+{
+    "altura": "1.75",
+    "peso": "94"
+}

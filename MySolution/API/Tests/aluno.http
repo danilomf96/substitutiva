@@ -1,0 +1,14 @@
+### Listar alunos
+GET http://localhost:5283/api/aluno/listar
+
+### Listar imc por aluno
+GET http://localhost:5283/api/aluno/4b10069d-26cb-4b3f-be14-40c109085c2b/imc
+
+### Cadastrar um novo aluno
+POST http://localhost:5283/api/aluno/cadastrar
+Content-Type: application/json
+
+{
+    "nome": "danilo",
+    "cpf": "06738300980"
+}
