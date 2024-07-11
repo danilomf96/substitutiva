@@ -19,3 +19,6 @@ Content-Type: application/json
     "altura": "1.75",
     "peso": "94"
 }
+
+###
+GET http://localhost:5283/api/imc/buscar/f101990b-4091-430a-b649-49d690d7383e

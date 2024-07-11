@@ -124,6 +124,16 @@ app.MapPut("/api/imc/alterar/{imcId}", ([FromServices] AppDataContext ctx,
     return Results.Ok(imc);
 });
 
-
+app.MapGet("/api/imc/buscar/{id}", ([FromRoute] string id,
+    [FromServices] AppDataContext ctx) =>
+{
+    Imc? imc =
+        ctx.Imcs.FirstOrDefault(x => x.ImcId == id);
+    if (imc is null)
+    {
+        return Results.NotFound("Imc não encontrado!");
+    }
+    return Results.Ok(imc);
+});
 app.UseCors("Acesso Total");
 app.Run();
